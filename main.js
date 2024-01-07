@@ -1,6 +1,84 @@
 /******************
  * YOUR CODE HERE *
  ******************/
+function xify(str){
+  let string = ""
+  for(let char of str){
+    string += "x"
+  } return string
+}
+
+function yellingChars(str){
+  let string = ""
+  for(let char of str){
+    string += char + "!"
+  }return string
+}
+
+function indexedChars(str){
+  let string = ""
+  for(let i =0; i < str.length; i++){
+    string += i + str[i]
+  } return string
+}
+
+function exclaim(str){
+  let result = ""
+  for(let i = 0; i < str.length; i++){
+    let char = str[i]
+    if(char === "?"|| char === "."){
+      char = "!"
+    }
+    result += char
+  } return result
+}
+
+function truncate(){
+
+}
+
+function emailify(str){
+
+}
+
+function reverse(){
+
+}
+
+function onlyVowels(){
+
+}
+
+function numberedChars(){
+  let string = ""
+  for(let i = 0; i < str.length; i++){
+    string += "( + (i+1))" + str[i]
+  } return string
+  }
+
+
+function crazyCase(){
+
+}
+
+function titleCase(){
+
+}
+
+function camelCase(){
+
+}
+
+function crazyCase2ReturnOfCrazyCase(){
+
+}
+
+
+
+
+
+
+
 
 
 
@@ -41,8 +119,8 @@ if (typeof truncate === 'undefined') {
   truncate = undefined;
 }
 
-if (typeof ciEmailify === 'undefined') {
-  ciEmailify = undefined;
+if (typeof emailify === 'undefined') {
+  emailify = undefined;
 }
 
 if (typeof reverse === 'undefined') {
