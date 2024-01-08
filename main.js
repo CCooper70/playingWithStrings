@@ -32,27 +32,68 @@ function exclaim(str){
     result += char
   } return result
 }
+function repeatIt(str, n) {
+  let result = "";
+  for (let i = 0; i < n; i++) {
+    result += str;
+  }
+  return result;
+}
 
 function truncate(){
-
+ 
 }
 
 function emailify(str){
-
+  str = str.toLowerCase();
+  let space = str.indexOf(" ");
+  if (space === -1) {
+    return str[0];
+  }
+  let output = "";
+  for (let i = 0; i < space; i++) {
+    if (i === 0) {
+      output += str[i];
+    }
+  }
+  for (let i = space; i < str.length; i++) {
+    if (str[i] !== " ") {
+      output += str[i];
+    }
+  }
+  output += ".prsvr@gmail.com";
+  return output;
 }
 
-function reverse(){
-
+function reverse(str){
+  let string = ""
+  for (let i = str.length - 1; i >= 0; i--) {
+    string += str[i]
+  }
+  return string
 }
 
-function onlyVowels(){
 
+
+function onlyVowels(str){
+  let result = "";
+  let vowels = "AEIOUaeiou";
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    for (let j = 0; j < vowels.length; j++) {
+      if (char === vowels[j]) {
+        result += char;
+        break;
+      }
+    }
+  }
+  return result;
 }
 
-function numberedChars(){
+function numberedChars(str){
   let string = ""
   for(let i = 0; i < str.length; i++){
-    string += "( + (i+1))" + str[i]
+    string += "(" + (i + 1) + ")" + str[i]
   } return string
   }
 
@@ -65,8 +106,20 @@ function titleCase(){
 
 }
 
-function camelCase(){
-
+function camelCase(str){
+  let result = "";
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    if (char !== " ") {
+      if (i > 0 && str[i - 1] === " ") {
+        char = char.toUpperCase();
+      } else {
+        char = char.toLowerCase();
+      }
+      result += char;
+    }
+  }
+  return result;
 }
 
 function crazyCase2ReturnOfCrazyCase(){
